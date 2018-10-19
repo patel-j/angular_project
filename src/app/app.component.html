@@ -1,0 +1,63 @@
+<!---sart carousel --->
+
+<div class="cointainer">
+  <div ng2-carouselamos class="slider-wrapper">
+    [items]="items"
+    [width]="900"
+    [$prev]="prev"
+    [$next]="next"
+    [$items]="item">
+  </div>
+
+  <ng-template #prev>
+    <img src="" id="left">
+  </ng-template>
+  <ng-template #next>
+    <img src="" id="right">
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+    <div>
+      <img src="{{item.name}}">
+    </div>
+
+  </ng-template>
+</div>
+<!---end angula2 carousel --->
+
+
+<div class="cointainer"> 
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink='/Home'>Home</a></li>
+      <li><a routerLink='/About'>About</a></li>
+      <li><a routerLink='/Contact'>Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  
+  <!--<ul class="nav">
+  <li class="nav-item">
+    <a routerLink='/Home' class="nav-link active">Home</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink='/About' class="nav-link">About</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink='/Contact' class="nav-link">Contact</a>
+  </li>
+</ul>-->
+
+</div>
+<router-outlet></router-outlet>
+
+<!--<hello name="{{ name }}"></hello>-->
+<!---<p>
+  Start editing to see some magic happen :)
+</p>-->
